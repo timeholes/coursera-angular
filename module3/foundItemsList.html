@@ -1,0 +1,4 @@
+    <table class="table table-bordered"><tr ng-repeat="item in myFoundItems">
+    <td>{{ $index + 1 }}</td><td>{{ item.short_name }}</td><td>{{ item.name }}</td><td> {{ item.description }} </td><td><button class="btn" ng-click="onRemove({index: $index})">Don't want!</button></td>
+    </tr>
+     </table>
