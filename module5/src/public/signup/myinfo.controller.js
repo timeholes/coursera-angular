@@ -10,7 +10,6 @@
     var userInfo = SignUpService.getUserInfo();
 
     info.myInfo = userInfo;
-    console.log(info.myInfo);
     if (userInfo.registered == true) {
       info.signup = true
     } else {

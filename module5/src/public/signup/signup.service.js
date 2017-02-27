@@ -24,7 +24,6 @@
       userInfo.email = email;
       userInfo.phone = phone;
       userInfo.registered = true;
-      console.log(userInfo);
     };
 
     service.getUserInfo = function () {
