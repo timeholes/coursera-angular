@@ -1,0 +1,14 @@
+(function () {
+  "use strict";
+
+  angular.module('common', [])
+    .constant('ApiPath', 'https://guarded-atoll-10117.herokuapp.com')
+    .config(config);
+
+  config.$inject = ['$httpProvider'];
+
+  function config($httpProvider) {
+    $httpProvider.interceptors.push('loadingHttpInterceptor');
+  }
+
+})();

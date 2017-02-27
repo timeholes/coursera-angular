@@ -1,0 +1,25 @@
+<div class="container" ng-controller="MyInfoController as info">
+  <h1>My info</h1>
+  <hr>
+  <span ng-if="!info.signup">
+            Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a>
+          </span>
+  <div ng-if="info.signup">
+    <span>            First name: {{info.myInfo.first_name}}           </span>
+    <br>
+    <span>            Last name: {{info.myInfo.last_name}}           </span>
+    <br>
+    <span>            E-mail: {{info.myInfo.email}}           </span>
+    <br>
+    <span ng-if="(info.myInfo.phone!=='') && (info.myInfo.phone!==undefined)">
+            Phone nr.: {{info.myInfo.phone}}<br>
+          </span>
+    <span>            Favourite dish:          </span>
+    <br>
+    <div>
+      <img class="img-responsive" width="250" height="150" ng-src="https://guarded-atoll-10117.herokuapp.com/images/{{info.myInfo.fav_dish.short_name}}.jpg" alt="{{info.myInfo.fav_dish.name}}">
+      <h3 class="menu-item-title">{{info.myInfo.fav_dish.name}}</h3>
+      <p class="menu-item-details">{{info.myInfo.fav_dish.description}}</p>
+    </div>
+  </div>
+</div>
